@@ -38,8 +38,8 @@ const managerHTML = (manager) => {
 }
 
 const engineerHTML = (engineer) => {
-    return html+=
-    `<div class="card" style="width: 20rem;">
+    return html +=
+        `<div class="card" style="width: 20rem;">
     <div class="card-body">
        <div class="card-header">
        <h5 class="card-title">${engineer.getName()}</h5>
@@ -56,8 +56,8 @@ const engineerHTML = (engineer) => {
 }
 
 const internHTML = (intern) => {
-    return html+=
-    `<div class="card" style="width: 20rem;">
+    return html +=
+        `<div class="card" style="width: 20rem;">
     <div class="card-body">
        <div class="card-header">
        <h5 class="card-title">${intern.getName()}</h5>
@@ -72,3 +72,30 @@ const internHTML = (intern) => {
 </div>
 `
 }
+
+const generateHTML = (arr) => {
+    arr.forEach(employee => {
+        switch (employee.getRole()) {
+            case "Manager":
+                managerHTML(employee);
+                break;
+
+            case "Engineer":
+                engineerHTML(employee);
+                break;
+
+            default:
+                internHTML(employee);
+                break;
+        }
+    });
+
+    return html +=
+
+        `</main>
+</body>
+</html>`
+
+}
+
+module.exports = generateHTML;
