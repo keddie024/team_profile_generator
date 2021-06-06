@@ -48,7 +48,7 @@ const engineerHTML = (engineer) => {
        <ul class="list-group list-group-flush">
            <li class="list-group-item">ID No.: ${engineer.getId()}</li>
            <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-           <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
+           <li class="list-group-item">GitHub: ${engineer.getGithub()}</li>
        </ul>
    </div>
 </div>
