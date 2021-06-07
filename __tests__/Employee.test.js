@@ -30,7 +30,7 @@ describe("Employee", () => {
     })
 
     test ("Can get role of the Employee", () => {
-        const employee = new Employee("Name");
-        expect(employee.getRole()).toBe("Name", 24, "name@mail.com");
+        const employee = new Employee("Name", 24, "name@mail.com");
+        expect(employee.getRole()).toBe("Employee");
     })
 })
